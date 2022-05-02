@@ -1,0 +1,42 @@
+/* Tags with only the name */
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: darkslategrey;
+}
+
+p {
+    text-align: left;
+    padding: 6px;
+}
+
+
+/* Ids with a Hashtag (#) */
+
+#login,
+#signUp {
+    background-color: brown;
+    color: wheat;
+}
+
+
+/* Classes with a dot (.) */
+
+.items {
+    color: blue;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    color: orange;
+    max-width: 70%;
+    margin: 0 auto;
+    display: flex;
+}
