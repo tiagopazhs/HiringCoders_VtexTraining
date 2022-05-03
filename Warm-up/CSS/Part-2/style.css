@@ -1,0 +1,36 @@
+    * {
+        color: orange;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        margin: 0;
+    }
+    /* #first {
+    border: 1px solid black;
+    margin: 30px;
+}
+
+.second {
+    border: 5px solid black;
+    padding: 30px;
+} */
+    
+    nav span {
+        color: purple;
+    }
+    /* hover change the style when we touch with the mouse. S2*/
+    
+    nav span:hover {
+        color: blue;
+    }
+    
+    #first,
+    .second {
+        border: 5px solid black;
+        padding: 30px;
+        margin: 5px;
+    }
+    
+    .second>div {
+        display: block !important;
+    }
+    /* Don't use !important every time. */
