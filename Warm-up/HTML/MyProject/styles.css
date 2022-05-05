@@ -87,6 +87,7 @@
     #arrow {
         font-size: 30px;
         cursor: pointer;
+        color: red;
         animation: blink 1s steps(5, start) infinite;
     }
     
