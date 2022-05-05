@@ -2,7 +2,7 @@
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-        color: #46788A;
+        color: #ECE2D4;
         font-family: 'Inter', Verdana, Geneva, Tahoma, sans-serif;
         text-align: center;
     }
@@ -27,11 +27,20 @@
         border: 1px solid #46788A;
         justify-content: space-around;
         padding: 5px;
-        background-color: #FAD488;
+        background-color: #46788A;
+        margin: 25px;
+    }
+    
+    header ul a {
+        transition: 300ms;
+    }
+    
+    header ul a:hover {
+        color: #ECE2D4;
     }
     
     .backgroungHeader img {
-        width: 290px;
+        width: 29px;
     }
     
     .container.name h1 {
@@ -45,12 +54,53 @@
     
     .form {
         width: 40%;
+        display: flex;
+        text-align: center;
     }
     
     .form input {
         width: 50%;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px 0px 0px 5px;
     }
     
     .form button {
         width: 15%;
+        padding: 5px 10px;
+        background-color: orange;
+        color: #2F312E;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        transition: 300ms;
+        border-radius: 0px 5px 5px 0px;
+        border-left: -5px;
+        margin-top: 20px;
+    }
+    
+    .form button:hover {
+        background-color: #2F312E;
+        color: #ECE2D4;
+    }
+    
+    #arrow {
+        font-size: 30px;
+        cursor: pointer;
+        animation: blink 1s steps(5, start) infinite;
+    }
+    
+    @keyframes bllink {
+        to {
+            visibility: hidden;
+        }
+    }
+    
+    .rotate {
+        transform: rotate(180deg);
+        transition: 300ms;
+    }
+    
+    #animation {
+        transition: 300ms;
     }

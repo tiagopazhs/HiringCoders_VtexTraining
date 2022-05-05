@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,900&display=swap" rel="stylesheet">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M311.9 335.1l-132.4 136.8C174.1 477.3 167.1 480 160 480c-7.055 0-14.12-2.702-19.47-8.109l-132.4-136.8C-9.229 317.8 3.055 288 27.66 288h264.7C316.9 288 329.2 317.8 311.9 335.1z" /></svg>
     <title>Tiago Paz</title>
 </head>
 
@@ -35,29 +36,42 @@
     </header>
     <main>
         <section class="container">
-            <diV class="name">
+            <div class="name">
                 <h1>Tiago Paz</h1>
                 <h5>Full-Stack Developer</h5>
-            </diV>
-            <!-- 
-            <div id="arrow">
-                <i class="fa-solid fa-sort-down"></i>
-            </div> -->
-            <div><img src="BG.jpeg" alt="BG"></div>
+            </div>
+
+            <div onclick="displayAbout()" id="arrow">
+                <i id="animation" lass="fa-solid fa-sort-down"></i>
+            </div>
+
             <div>
+                <img src="BG.jpeg" alt="BG">
+            </div>
+
+            <div style="display: none;" id="about">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Sunt quidem earum non autem, <br> doloremque dolorem similique sequi tempora numquam illo vero, aut ipsum?</p>
             </div>
+
             <div class="form">
-                <form action="">
+                <form action=" ">
                     <div>
                         <p>send your contact.</p>
                     </div>
-                    <input type="text" placeholder="your best email">
-                    <button>send!</button>
+                    <input type="text " placeholder="your best email :) ">
+                    <button>send</button>
                 </form>
             </div>
         </section>
     </main>
+    <script>
+        function displayAbout() {
+            var arrow = document.getElementById('animation');
+            arrow.classList.toggle('rotate');
+        }
+    </script>
 </body>
+
+</html>
 
 </html>
