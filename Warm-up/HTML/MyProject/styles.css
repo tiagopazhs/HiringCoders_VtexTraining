@@ -1,110 +1,148 @@
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        color: #ECE2D4;
-        font-family: 'Inter', Verdana, Geneva, Tahoma, sans-serif;
-        text-align: center;
-    }
-    
-    ul {
-        list-style: none;
-        font-size: 700;
-        font-style: italic;
-    }
-    
-    a {
-        text-decoration: none;
-    }
-    
-    body {
-        background-color: #2F312E;
-    }
-    
-    header {
-        display: flex;
-        border-radius: 10px;
-        border: 1px solid #46788A;
-        justify-content: space-around;
-        padding: 5px;
-        background-color: #46788A;
-        margin: 25px;
-    }
-    
-    header ul a {
-        transition: 300ms;
-    }
-    
-    header ul a:hover {
-        color: #ECE2D4;
-    }
-    
-    .backgroungHeader img {
-        width: 29px;
-    }
-    
-    .container.name h1 {
-        font-size: 60px;
-    }
-    
-    #about p {
-        max-width: 600px;
-        margin: 0 auto;
-    }
-    
-    .form {
-        width: 40%;
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        width: 100%;
-    }
-    
-    .form input {
-        width: 50%;
-        padding: 5px 10px;
-        border: none;
-        border-radius: 5px 0px 0px 5px;
-        align-items: center;
-    }
-    
-    .form button {
-        width: 15%;
-        padding: 5px 10px;
-        background-color: orange;
-        color: #2F312E;
-        font-weight: 600;
-        border: none;
-        cursor: pointer;
-        transition: 300ms;
-        border-radius: 0px 5px 5px 0px;
-        border-left: -5px;
-        margin-top: 20px;
-    }
-    
-    .form button:hover {
-        background-color: #2F312E;
-        color: #ECE2D4;
-    }
-    
-    #arrow {
-        font-size: 30px;
-        cursor: pointer;
-        color: red;
-        animation: blink 1s steps(5, start) infinite;
-    }
-    
-    @keyframes bllink {
-        to {
-            visibility: hidden;
-        }
-    }
-    
-    .rotate {
-        transform: rotate(180deg);
-        transition: 300ms;
-    }
-    
-    #animation {
-        transition: 300ms;
-    }
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                color: #ECE2D4;
+                font-family: 'Inter', Verdana, Geneva, Tahoma, sans-serif;
+                text-align: center;
+            }
+            
+            ul {
+                list-style: none;
+                font-size: 700;
+                font-style: italic;
+            }
+            
+            a {
+                text-decoration: none;
+            }
+            
+            body {
+                background-color: #2F312E;
+            }
+            
+            main {
+                display: flex;
+            }
+            
+            main .left,
+            main .rigth {
+                width: 50%;
+            }
+            
+            header {
+                display: flex;
+                border-radius: 10px;
+                border: 1px solid #46788A;
+                justify-content: space-around;
+                padding: 5px;
+                background-color: #46788A;
+                margin: 25px;
+            }
+            
+            header ul a {
+                transition: 300ms;
+            }
+            
+            header ul a:hover {
+                color: #ECE2D4;
+            }
+            
+            .backgroungHeader .sideA {
+                width: 60px;
+                padding: 10px 0 10px 28px;
+            }
+            
+            .backgroungHeader .sideB {
+                width: 40%;
+                display: flex;
+                align-items: center;
+            }
+            
+            .backgroungHeader .sideB ul a {
+                padding: 45px;
+            }
+            
+            .backgroungHeader img {
+                width: 35px;
+            }
+            
+            .container.name h1 {
+                font-size: 60px;
+            }
+            
+            #about p {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            
+            .form {
+                width: 40%;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .form input {
+                width: 50%;
+                padding: 5px 10px;
+                border: none;
+                border-radius: 5px 0px 0px 5px;
+                align-items: center;
+            }
+            
+            .form button {
+                width: 15%;
+                padding: 5px 10px;
+                background-color: orange;
+                color: #2F312E;
+                font-weight: 600;
+                border: none;
+                cursor: pointer;
+                transition: 300ms;
+                border-radius: 0px 5px 5px 0px;
+                border-left: -5px;
+                margin-top: 20px;
+            }
+            
+            .form button:hover {
+                background-color: #2F312E;
+                color: #ECE2D4;
+            }
+            
+            #arrow {
+                font-size: 30px;
+                cursor: pointer;
+                color: red;
+                animation: blink 1s steps(5, start) infinite;
+            }
+            
+            @keyframes bllink {
+                to {
+                    visibility: hidden;
+                }
+            }
+            
+            .rotate {
+                transform: rotate(180deg);
+                transition: 300ms;
+            }
+            
+            .active {
+                display: block !important;
+                display: flex;
+            }
+            
+            #animation {
+                transition: 300ms;
+            }
+            
+            @media only screen and (max-width: 480px) {
+                header ul a:hover {
+                    color: red;
+                }
+                body {
+                    background-color: red;
+                }
+            }

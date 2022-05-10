@@ -19,54 +19,65 @@
 </head>
 
 <body>
+
+
     <header class="backgroungHeader">
-        <div>
+        <div class="sideA">
             <img src="home.png" alt="hh">
         </div>
-        <ul>
-            <a target="blank" href="https://github.com/tiagopazhs">github</a>
-        </ul>
-        <ul>
-            <a target="blank" href="mailto:tiagopaz.hs@gmail.com">email</a>
-        </ul>
-        <ul>
-            <a target="blank" href="https:/wa.me/31982673852">whatsapp</a>
-        </ul>
+        <div class="sideB">
+            <ul>
+                <a target="blank" href="https://github.com/tiagopazhs">github</a>
+            </ul>
+            <ul>
+                <a target="blank" href="mailto:tiagopaz.hs@gmail.com">email</a>
+            </ul>
+            <ul>
+                <a target="blank" href="https:/wa.me/31982673852">whatsapp</a>
+            </ul>
+        </div>
     </header>
     <main>
-        <section class="container">
-            <div class="name">
-                <h1>Tiago Paz</h1>
-                <h5>Full-Stack Developer</h5>
-            </div>
-
-            <div onclick="displayAbout()" id="arrow">
-                <img id="animation" class="setaBaixo" src="setaBaixo96.png" alt="" />
-            </div>
-
+        <div class="left">
             <div>
                 <img src="BG.jpeg" alt="BG">
             </div>
+        </div>
+        <div class="rigth">
+            <section class="container">
+                <div class="name">
+                    <h1>Tiago Paz</h1>
+                    <h5>Full-Stack Developer</h5>
+                </div>
 
-            <div style="display: none;" id="about">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Sunt quidem earum non autem, <br> doloremque dolorem similique sequi tempora numquam illo vero, aut ipsum?</p>
-            </div>
+                <div onclick="displayAbout()" id="arrow">
+                    <img id="animation" class="setaBaixo" src="setaBaixo96.png" alt="" />
+                </div>
 
-            <div class="form">
-                <form action=" ">
-                    <div>
-                        <p>send your contact.</p>
-                    </div>
-                    <input type="text " placeholder="your best email :) ">
-                    <button>send</button>
-                </form>
-            </div>
-        </section>
+
+
+                <div style="display: none;" id="about">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Sunt quidem earum non autem, <br> doloremque dolorem similique sequi tempora numquam illo vero, aut ipsum?</p>
+                </div>
+
+                <div class="form">
+                    <form action=" ">
+                        <div>
+                            <p>send your contact.</p>
+                        </div>
+                        <input type="text " placeholder="your best email :) ">
+                        <button>send</button>
+                    </form>
+                </div>
+            </section>
+        </div>
     </main>
     <script>
         function displayAbout() {
             var arrow = document.getElementById('animation');
             arrow.classList.toggle('rotate');
+            var display = document.getElementById('about');
+            display.classList.toggle('active');
         }
     </script>
 </body>
