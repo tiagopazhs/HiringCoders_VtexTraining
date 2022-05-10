@@ -2,7 +2,7 @@
                 padding: 0;
                 margin: 0;
                 box-sizing: border-box;
-                color: #ECE2D4;
+                color: #F1923D;
                 font-family: 'Inter', Verdana, Geneva, Tahoma, sans-serif;
                 text-align: center;
             }
@@ -15,6 +15,7 @@
             
             a {
                 text-decoration: none;
+                color: #ECE2D4;
             }
             
             body {
@@ -58,13 +59,15 @@
             }
             
             header ul a:hover {
-                color: #ECE2D4;
+                color: #F1923D;
             }
             
             .backgroungHeader .sideA {
                 width: 50%;
                 justify-content: flex-start;
                 padding: 10px 0 10px 28px;
+                display: flex;
+                flex-direction: row;
             }
             
             .backgroungHeader .sideB {
@@ -97,26 +100,23 @@
             #about p {
                 max-width: 600px;
                 margin: 0 auto;
+                text-align: justify;
             }
             
-            .form {
-                width: 40%;
-                display: flex;
-                text-align: center;
-                justify-content: center;
+            div form {
                 width: 100%;
             }
             
             .form input {
-                width: 50%;
-                padding: 5px 10px;
+                width: 70%;
+                padding: 5px 5px;
                 border: none;
                 border-radius: 5px 0px 0px 5px;
                 align-items: center;
             }
             
             .form button {
-                width: 15%;
+                width: 25%;
                 padding: 5px 10px;
                 background-color: orange;
                 color: #2F312E;
@@ -147,10 +147,22 @@
                 }
             }
             
-            .containerBaseBoard {
+            div.containerBaseBoard {
                 width: 100%;
                 height: 100px;
                 background-color: #46788A;
+                display: flex;
+                flex-direction: row-reverse;
+            }
+            
+            footer img#logoVtex {
+                vertical-align: auto;
+                padding: 3%;
+            }
+            
+            footer img#logoHC {
+                vertical-align: bottom;
+                padding: 2%;
             }
             
             .rotate {
