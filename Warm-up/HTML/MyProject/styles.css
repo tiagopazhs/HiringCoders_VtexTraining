@@ -62,14 +62,16 @@
             }
             
             .backgroungHeader .sideA {
-                width: 60px;
+                width: 50%;
+                justify-content: flex-start;
                 padding: 10px 0 10px 28px;
             }
             
             .backgroungHeader .sideB {
-                width: 40%;
+                width: 50%;
                 display: flex;
                 align-items: center;
+                justify-content: end;
             }
             
             .backgroungHeader .sideB ul a {
@@ -146,9 +148,9 @@
             }
             
             .containerBaseBoard {
-                width: 255px;
+                width: 100%;
                 height: 100px;
-                color: red;
+                background-color: #46788A;
             }
             
             .rotate {
