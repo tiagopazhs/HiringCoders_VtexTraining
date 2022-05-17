@@ -13,5 +13,5 @@ console.log(person);
 
 
 // new method
-let { name, lasName, age } = person;
-console.log(name, age);
+let { name, lasName, age, testeUndefined } = person;
+console.log(name, age, testeUndefined);
