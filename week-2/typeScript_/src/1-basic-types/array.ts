@@ -8,3 +8,4 @@ function showCats(cats: string[]) {
     return `The cats are: ${cats.join(', ')}`
 }
 
+console.log(showCats(cats));
