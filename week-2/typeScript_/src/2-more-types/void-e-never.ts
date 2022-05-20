@@ -5,9 +5,3 @@ function principal():void {
 
 principal()
 
-
-function withOutReturn(): never{
-trow new Error(' ola ')
-}
-
-const a = withOutReturn
