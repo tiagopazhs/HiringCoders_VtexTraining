@@ -1,0 +1,5 @@
+Public: Is accept inside and outside of the class.
+Private: Only inside the class.
+Protect: Inside of the class and inside of the subclasses.
+
+We can implate things that are public.

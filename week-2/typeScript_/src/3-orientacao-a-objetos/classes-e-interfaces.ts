@@ -20,4 +20,7 @@ class Playes extends Users {
 }
 
 const jogador = new Playes ('gabriel', 25, 'AOV');
-console.log(jogador.statusCourrenceGame())
+console.log(jogador.statusCourrenceGame());
+
+// private
+
