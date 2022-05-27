@@ -3,20 +3,27 @@ import { createServer } from 'http';
 const server = createServer((request, response) =>{
     switch(request.url){
         case '/status':{
-            response.writeHead(200. );
-            response.write('Okay');
+            response.writeHead(200, {
+                'ContentType': 'application/json',
+            });
+
+            response.write(
+                JSON.stringify({
+                    status: 'Okay',
+                }));
             response.end();
             break;
         }
         default :{
             response.writeHead(404, 'Service not found.' );
-            response.write('Okay');
             response.end();
-            return;
         }
     }
 });
 
-server.listen(8000. '1.0127.0.0.1', () => {
-    console.log('Server is listening at https://127.0.0.1:8000.');
+const PORT = process.env.PORT ? parseInt(process.env.PORT) : 8000;
+const HOSTNAME = process.env.HOSTNAME || '127.0.0.1';
+
+server.listen(PORT, HOSTNAME, () => {
+    console.log(`Server is listening at https://${HOSTNAME}:${PORT}.`);
 });
