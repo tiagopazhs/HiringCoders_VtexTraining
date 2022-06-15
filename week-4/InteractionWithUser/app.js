@@ -11,23 +11,34 @@ const port = 3000;
 //implementacao da regra de negocio / lofica de programacao
 const server = http.createServer((req, res) => {
 
-// Create a User
+  let answer;
+  const urlparse = url.parse(req.url, true);
+  console.log(urlparse);
+
   //get user info
   const params = queryString.parse(url.parse(req.url, true).search);
-  //save user info
-  fs.writeFile('users/mynewfile3.txt', 'Hello content!', function (err) {
-    if (err) throw err;
-    console.log('Saved!');
-  });
 
+  // Create a User AND Update a User
+  if(urlparse.pathname == '/criar-usuario'){
+    
+    //save user info
+    fs.writeFile('users/' + params.id + '.txt', JSON.stringify(params), function (err) {
+      if (err) throw err;
+      console.log('Saved!');
+    });
 
-//Update a User
-//Select a User
-//Delete User
+    answer = 'User created with success :)'
+  }
+  else if(urlparse.pathname == '/selecionar-usuario'){
+    
+  }
+
+  //Select a User
+  //Delete User
 
 res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('helloo Word');
+  res.end(answer);
 });
 
 //execucao
