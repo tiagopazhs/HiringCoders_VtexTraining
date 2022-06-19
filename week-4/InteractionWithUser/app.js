@@ -11,7 +11,7 @@ const port = 3000;
 //implementacao da regra de negocio / lofica de programacao
 const server = http.createServer((req, res) => {
 
-  let answer;
+  var answer;
   const urlparse = url.parse(req.url, true);
   console.log(urlparse);
 
@@ -29,12 +29,15 @@ const server = http.createServer((req, res) => {
 
     answer = 'User created with success :)'
   }
-  else if(urlparse.pathname == '/selecionar-usuario'){
-    
-  }
-
   //Select a User
-  //Delete User
+  else if(urlparse.pathname == '/selecionar-usuario'){
+    fs.readFile('users/' + params.id + '.txt', function (err, data) {
+      answer = data;
+      console.log(answer);
+    })
+  };
+
+//Delete User
 
 res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
