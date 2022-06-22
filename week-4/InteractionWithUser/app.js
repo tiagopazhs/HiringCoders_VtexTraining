@@ -40,7 +40,8 @@ const server = http.createServer((req, res) => {
 //Delete User
 
 res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
+  res.setHeader('Content-Type', 'te.
+  xt/plain');
   res.end(answer);
 });
 
