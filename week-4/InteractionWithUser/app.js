@@ -19,12 +19,14 @@ const server = http.createServer((req, res) => {
   const params = queryString.parse(url.parse(req.url, true).search);
 
   // Create a User AND Update a User
-  if(urlparse.pathname == '/criar-usuario'){
+  if(urlparse.pathname == '/criar-atualizar-usuario'){
     
     //save user info
     fs.writeFile('users/' + params.id + '.txt', JSON.stringify(params), function (err) {
       if (err) throw err;
       console.log('Saved!');
+
+      answer = 'User created!'
 
       res.statusCode = 200;
       res.setHeader('Content-Type', 'text/plain');
@@ -48,7 +50,10 @@ const server = http.createServer((req, res) => {
 //Delete User
   else if(urlparse.pathname == '/remover-usuario'){
   fs.unlink('users/' + params.id + '.txt', function (err, data) {
-    answer = data;
+    console.log('File deleted!');
+
+    answer = err ? 'User not found.' : 'User deleted!'
+
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(answer);
@@ -62,3 +67,8 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
+
+//http://localhost:3000/criar-atualizar-usuario?nome=tiaguinho&idade=23&id=1
+//http://localhost:3000/criar-atualizar-usuario?nome=tiaguinho&idade=24&id=1
+//http://localhost:3000/selecionar-usuario?id=1
+//http://localhost:3000/remover-usuario?id=1
